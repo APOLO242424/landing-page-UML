@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Imagen principal (Hero) -->
+    <section id="inicio" class="hero">
+        <h1>Bienvenido a mi Landing Page</h1>
+        <p>Descripción breve de tu producto o servicio</p>
+        <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Imagen principal">
+    </section>
+
+    <!-- Servicios o Beneficios -->
+    <section id="servicios">
+        <h2>Lo que ofrecemos</h2>
+        <div class="servicio">
+            <img src="{{ url_for('static', filename='images/servicio1.jpg') }}" alt="Servicio 1">
+            <h3>Servicio 1</h3>
+            <p>Descripción breve</p>
+        </div>
+        <div class="servicio">
+            <img src="{{ url_for('static', filename='images/servicio2.jpg') }}" alt="Servicio 2">
+            <h3>Servicio 2</h3>
+            <p>Descripción breve</p>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form method="POST" action="/enviar">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="correo" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Mi Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
