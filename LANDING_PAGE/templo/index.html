@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D&S PERSONALIZIONES</title>
+    <title>Mi Landing Page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
     <!-- Encabezado -->
     <header>
-        <img src="{{ C:/Users/Latitude 7480/Desktop/landing page UML/LANDING_PAGE/temple/static/images/logo.jpg }}" alt="Logo" class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -22,7 +22,7 @@
 
     <!-- Imagen principal (Hero) -->
     <section id="inicio" class="hero">
-        <h1>Bienvenidos a D&S PERSONALIZIONES</h1>
+        <h1>Bienvenido a mi Landing Page</h1>
         <p>Descripción breve de tu producto o servicio</p>
         <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Imagen principal">
     </section>
