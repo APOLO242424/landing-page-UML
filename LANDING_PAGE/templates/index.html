@@ -1,109 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PERSONALIZACIONES D&P</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&S Personalizaciones</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
 
-        <!-- Encabezado -->
-        <header>
-            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+    <!-- Encabezado -->
+    <header>
+        <img src="{{ url_for('static', filename='imagenes/logo/logo.png') }}" alt="Logo D&S Personalizaciones" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Imagen principal (Hero) -->
-        <section id="inicio" class="hero">
-            <h1>BIENVENIDOS</h1>
-            <p>Les ofrecemos distintos tipos de servicios personalizados de sublimación</p>
-            <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Imagen principal">
-        </section>
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero">
+        <h1>Bienvenidos a D&S Personalizaciones</h1>
+        <p>Tu taller de confianza para sublimación y serigrafía de alta calidad. Hacemos realidad tus ideas en una amplia variedad de productos.</p>
+    </section>
 
-        <!-- Servicios o Beneficios -->
-        <section id="servicios">
-            <h2>Tazas</h2>
-            <div class="servicio">
-                <img src="{{ url_for('static', filename='images//tazas/taza1.jpg') }}" alt="Servicio 1">
-                <h3>entre nuestros servicios personalizados les ofrecemos:</h3>
-                <ol>
-                    <li class="item1"></li>
-                    <img src="{{ url_for('static', filename='images/tazas/taza1.jpg') }}" alt="Producto 1">
-                    <li class="item2"></li>
-                    <img src="{{ url_for('static', filename='images/tazas/taza2.jpg') }}" alt="Producto 2">
-                    <li class="item3"></li>
-                    <img src="{{ url_for('static', filename='images/tazas/taza3.jpg') }}" alt="Producto 3">
-                    <li class="item4"></li>
-                    <img src="{{ url_for('static', filename='images/tazas/taza4.jpg') }}" alt="Producto 4">
-                    <li class="item5"></li>
-                </ol>
-                <p></p>
+    <!-- Sección de Servicios -->
+    <section id="servicios">
+        <h2>Nuestros Productos</h2>
+        <div class="servicios-container">
+            <div class="servicio-card">
+                <a href="{{ url_for('galeria_productos', categoria='tazas') }}">
+                    <img src="{{ url_for('static', filename='imagenes/tazas/taza1.png') }}" alt="Tazas Personalizadas">
+                    <h3>Tazas</h3>
+                </a>
             </div>
-            <div class="servicio">
-                <img src="{{ url_for('static', filename='images/camisas/camisa1.jpg') }}" alt="Servicio 2">
-                <h3>Camisas</h3>
-                <ol>
-                    <li class="item1"></li>
-                    <img src="{{ url_for('static', filename='images/camisas/camisa1.jpg') }}" alt="Producto 1">
-                    <li class="item2"></li>
-                    <img src="{{ url_for('static', filename='images/camisas/camisa2.jpg') }}" alt="Producto 2">
-                    <li class="item3"></li>
-                    <img src="{{ url_for('static', filename='images/camisas/camisa3.jpg') }}" alt="Producto 3">
-                    <li class="item4"></li>
-                    <img src="{{ url_for('static', filename='images/camisas/camisa4.jpg') }}" alt="Producto 4">
-                    <li class="item5"></li>
-                    <img src="{{ url_for('static', filename='images/camisas/camisa5.jpg') }}" alt="Producto 5">
-                </ol>
-                <p></p>
+            <div class="servicio-card">
+                <a href="{{ url_for('galeria_productos', categoria='camisas') }}">
+                    <img src="{{ url_for('static', filename='imagenes/camisas/camisa1.png') }}" alt="Camisas Personalizadas">
+                    <h3>Camisas</h3>
+                </a>
             </div>
-            <h3>otros productos</h3>
-            <div class="servicio">
-                <img src="{{ url_for('static', filename='images/otros/otro3.jpg') }}" alt="Servicio 3">
-                    <ol>
-                    <li class="item1"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro1.jpg') }}" alt="Producto 1">
-                    <li class="item2"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro2.jpg') }}" alt="Producto 2">
-                    <li class="item3"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro3.jpg') }}" alt="Producto 3">
-                    <li class="item4"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro4.jpg') }}" alt="Producto 4">
-                    <li class="item5"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro5.jpg') }}" alt="Producto 5">
-                    <li class="item6"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro6.jpg') }}" alt="Producto 6">
-                    <li class="item7"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro7.jpg') }}" alt="Producto 7">
-                    <li class="item8"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro8.jpg') }}" alt="Producto 8">
-                    <li class="item9"></li>
-                    <img src="{{ url_for('static', filename='images/otros/otro9.jpg') }}" alt="Producto 9">
-                    <li class="item10"></li>
-                </ol>
-                <p></p>
-        </section>
+            <div class="servicio-card">
+                <a href="{{ url_for('galeria_productos', categoria='otros') }}">
+                    <img src="{{ url_for('static', filename='imagenes/otros/imagen1.png') }}" alt="Otros Productos Personalizados">
+                    <h3>Otros Artículos</h3>
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Formulario de contacto -->
-        <section id="contacto">
-            <h2>Contáctanos</h2>
-            <form method="POST" action="/enviar">
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" name="correo" placeholder="Tu correo" required>
-                <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+    <!-- Formulario de contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="POST" action="/enviar">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="correo" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
-        <!-- Pie de página -->
-        <footer>
-            <p>&copy; En mi empresa encontrara productos de calidad como tazas, camisas y otros artículos.</p>
-        </footer>
-    </body>
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 D&S Personalizaciones. Productos de calidad como tazas, camisas y otros artículos.</p>
+    </footer>
+
+</body>
 </html>

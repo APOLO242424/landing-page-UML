@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de {{ categoria }} - D&S Personalizaciones</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='imagenes/logo/logo.png') }}" alt="Logo D&S Personalizaciones" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}#inicio">Inicio</a></li>
+                <li><a href="{{ url_for('index') }}#servicios">Servicios</a></li>
+                <li><a href="{{ url_for('index') }}#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Galería de Productos -->
+    <section id="galeria">
+        <h2>Galería de {{ categoria }}</h2>
+        <div class="galeria-container">
+            {% for imagen in imagenes %}
+                <div class="galeria-item">
+                    <img src="{{ url_for('static', filename='imagenes/' + categoria.lower() + '/' + imagen) }}" alt="{{ categoria }} - {{ loop.index }}">
+                </div>
+            {% else %}
+                <p>No hay imágenes disponibles en esta categoría.</p>
+            {% endfor %}
+        </div>
+        <div class="back-link">
+            <a href="{{ url_for('index') }}#servicios">Volver a Servicios</a>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 D&S Personalizaciones. Productos de calidad como tazas, camisas y otros artículos.</p>
+    </footer>
+
+</body>
+</html>
