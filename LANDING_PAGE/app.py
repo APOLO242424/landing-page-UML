@@ -1,3 +1,4 @@
+import platform
 from flask import Flask, render_template, request, redirect, url_for, flash
 import os
 from flask_mail import Mail, Message
@@ -69,5 +70,11 @@ def enviar():
     return redirect(url_for('index') + '#contacto')
 
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+if __name__ == "__main__":  
+     # Check the System Type before to decide to bind
+     # If the system is a Linux machine -:) 
+     if platform.system() == "Linux":
+        app.run(host='0.0.0.0',port=5000, debug=True)
+     # If the system is a windows /!\ Change  /!\ the   /!\ Port
+     elif platform.system() == "Windows":
+        app.run(host='0.0.0.0',port=50000, debug=True)
